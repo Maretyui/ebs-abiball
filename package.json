@@ -1,7 +1,8 @@
 {
-  "name": "ebs-abiball",
+  "name": "@maretyui/ebs-abiball",
   "version": "0.1.0",
   "private": true,
+  "author": "Maik Reinhardt",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
