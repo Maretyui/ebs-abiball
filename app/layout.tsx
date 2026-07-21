@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   title: "AbiVegas 2027 | EBS Abiball",
   description:
     "Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 – Feiere mit Stil, Spaß und unvergesslichen Momenten!",
+  openGraph: {
+    title: "AbiVegas 2027 | EBS Abiball",
+    description:
+      "Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 – Feiere mit Stil, Spaß und unvergesslichen Momenten!",
+    type: "website",
+    locale: "de_DE",
+  },
 };
 
 export default function RootLayout({
