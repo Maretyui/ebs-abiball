@@ -13,7 +13,7 @@ export default function Home() {
           Feiere mit Stil, Spaß und unvergesslichen Momenten!
         </p>
         <p className="text-sm text-foreground/60">
-          Weitere Infos zu Termin, Location und Tickets folgen in Kürze.
+          Weitere Infos zu Termin, Ort und Tickets folgen in Kürze.
         </p>
       </main>
     </div>
