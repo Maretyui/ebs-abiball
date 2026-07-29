@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Tell the browser both schemes are supported so native UI (scrollbars,
+     form controls, etc.) matches the page's own light/dark colors below
+     instead of defaulting to light chrome on a dark page. */
+  color-scheme: light dark;
 }
 
 @theme inline {
