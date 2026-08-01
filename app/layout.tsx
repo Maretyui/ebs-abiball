@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
   },
+  twitter: {
+    card: "summary",
+    title: "AbiVegas 2027 | EBS Abiball",
+    description:
+      "Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 – Feiere mit Stil, Spaß und unvergesslichen Momenten!",
+  },
 };
 
 export const viewport: Viewport = {
