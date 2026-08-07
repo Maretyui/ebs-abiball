@@ -9,6 +9,10 @@ Event website for the 2027 graduation ball ("Abiball") of the EBS graduating cla
 - Next.js (App Router) + TypeScript
 - Tailwind CSS
 
+## Content
+
+The placeholder homepage copy lives in `app/page.tsx`; page title/description metadata lives in `app/layout.tsx`. Update both once Termin, Ort and Ticket details are confirmed.
+
 ## Getting Started
 
 ```bash
