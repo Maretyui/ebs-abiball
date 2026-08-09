@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     description:
       "Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 – Feiere mit Stil, Spaß und unvergesslichen Momenten!",
   },
+  alternates: {
+    canonical: "/",
+  },
   formatDetection: {
     telephone: false,
   },
