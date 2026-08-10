@@ -13,6 +13,8 @@ Event website for the 2027 graduation ball ("Abiball") of the EBS graduating cla
 
 The placeholder homepage copy lives in `app/page.tsx`; page title/description metadata lives in `app/layout.tsx`. Update both once Termin, Ort and Ticket details are confirmed.
 
+Note that the title/description text in `app/layout.tsx` is duplicated across the top-level `metadata`, `openGraph`, and `twitter` fields — keep all three in sync when updating copy, since only editing one will leave stale text in link previews.
+
 ## Getting Started
 
 ```bash
