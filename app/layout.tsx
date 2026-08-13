@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     "Abschlussjahrgang 2027",
     "Abiturfeier",
   ],
+  authors: [{ name: "Maik Reinhardt" }],
+  creator: "Maik Reinhardt",
+  robots: { index: true, follow: true },
   openGraph: {
     title: "AbiVegas 2027 | EBS Abiball",
     description:
