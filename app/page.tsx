@@ -20,6 +20,18 @@ export default function Home() {
           Weitere Infos zu Termin, Ort und Tickets folgen in Kürze.
         </p>
       </main>
+      <footer className="pb-6 text-center text-xs text-foreground/40">
+        Design &amp; Umsetzung:{" "}
+        <a
+          href="https://maretyui.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-dotted underline-offset-2 hover:text-foreground/70"
+        >
+          Maik Reinhardt
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      </footer>
     </div>
   );
 }
