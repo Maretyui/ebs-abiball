@@ -8,15 +8,15 @@ export default function Home() {
           <p className="text-sm uppercase tracking-[0.2em] text-foreground/60">
             Abschlussjahrgang 2027
           </p>
-          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
+          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-balance">
             AbiVegas 2027
           </h1>
         </header>
-        <p className="text-lg text-foreground/80 leading-relaxed">
+        <p className="text-lg text-foreground/80 leading-relaxed text-pretty">
           Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 –
           Feiere mit Stil, Spaß und unvergesslichen Momenten!
         </p>
-        <p className="text-sm text-foreground/60">
+        <p className="text-sm text-foreground/60 text-pretty">
           Weitere Infos zu Termin, Ort und Tickets folgen in Kürze.
         </p>
       </main>
