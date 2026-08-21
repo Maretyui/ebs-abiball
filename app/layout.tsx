@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "AbiVegas 2027 | EBS Abiball",
   description:
     "Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 – Feiere mit Stil, Spaß und unvergesslichen Momenten!",
+  // Used by browsers/OSes as the short display name when a user pins or
+  // bookmarks the page (e.g. "Add to Home Screen"), separate from the
+  // longer <title> text above.
+  applicationName: "AbiVegas 2027",
   keywords: [
     "Abiball 2027",
     "AbiVegas 2027",
