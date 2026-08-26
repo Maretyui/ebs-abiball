@@ -17,7 +17,7 @@ Note that the title/description text in `app/layout.tsx` is duplicated across th
 
 ## Accessibility
 
-`app/globals.css` restores a visible `:focus-visible` outline (Tailwind v4 removes the browser default) so keyboard navigation stays visible without adding a ring on mouse clicks. Muted text (`text-foreground/60`, `text-foreground/70`) has already been checked against WCAG AA's 4.5:1 contrast minimum in both light and dark `color-scheme` — if any copy update introduces new muted/low-opacity text, re-check contrast rather than assuming the existing opacity values are safe at a different base color.
+`app/globals.css` restores a visible `:focus-visible` outline (Tailwind v4 removes the browser default) so keyboard navigation stays visible without adding a ring on mouse clicks, and honors `prefers-reduced-motion` by collapsing animation/transition durations to near-zero for visitors who've requested reduced motion at the OS level. Muted text (`text-foreground/60`, `text-foreground/70`) has already been checked against WCAG AA's 4.5:1 contrast minimum in both light and dark `color-scheme` — if any copy update introduces new muted/low-opacity text, re-check contrast rather than assuming the existing opacity values are safe at a different base color.
 
 ## Getting Started
 
