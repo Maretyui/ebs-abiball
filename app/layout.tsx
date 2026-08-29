@@ -18,6 +18,10 @@ const SITE_TITLE = "AbiVegas 2027 | EBS Abiball";
 const SITE_DESCRIPTION =
   "Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 – Feiere mit Stil, Spaß und unvergesslichen Momenten!";
 
+// No metadataBase here — this event site has no confirmed live domain yet
+// (see the README's placeholder-status note), so `alternates.canonical`
+// below stays relative rather than being resolved against a guessed host.
+// Add it once a real domain exists.
 export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
