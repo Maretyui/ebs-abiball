@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "Abschlussjahrgang 2027",
     "Abiturfeier",
   ],
-  authors: [{ name: "Maik Reinhardt" }],
+  authors: [{ name: "Maik Reinhardt", url: "https://maretyui.com" }],
   creator: "Maik Reinhardt",
   robots: { index: true, follow: true },
   openGraph: {
