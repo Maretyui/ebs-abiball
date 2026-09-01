@@ -2,6 +2,7 @@
   "name": "@maretyui/ebs-abiball",
   "version": "1.0.0",
   "private": true,
+  "description": "Event website placeholder for the EBS Abiball graduating class celebration.",
   "author": "Maik Reinhardt",
   "scripts": {
     "dev": "next dev --turbopack",
