@@ -15,6 +15,8 @@ The placeholder homepage copy lives in `app/page.tsx`; page title/description me
 
 Note that the title/description text in `app/layout.tsx` is duplicated across the top-level `metadata`, `openGraph`, and `twitter` fields — keep all three in sync when updating copy, since only editing one will leave stale text in link previews.
 
+`app/layout.tsx`'s `alternates` also declares a `de-DE` hreflang entry alongside the canonical URL, telling search engines the page's language explicitly rather than leaving it to guesswork.
+
 `app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the event copy changes.
 
 ## Accessibility

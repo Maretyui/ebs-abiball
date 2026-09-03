@@ -53,6 +53,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+    languages: { "de-DE": "/" },
   },
   formatDetection: {
     telephone: false,
