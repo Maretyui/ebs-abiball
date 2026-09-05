@@ -11,6 +11,11 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "AbiVegas 2027",
     description:
       "Das ultimative Abiball-Erlebnis für den Abschlussjahrgang 2027 – Feiere mit Stil, Spaß und unvergesslichen Momenten!",
+    // Matches the de-DE hreflang already declared in layout.tsx's
+    // `alternates` — spelled out here too since the manifest is fetched
+    // independently of the page and has no other way to know the language.
+    lang: "de",
+    dir: "ltr",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
