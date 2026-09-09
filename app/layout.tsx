@@ -61,8 +61,13 @@ export const metadata: Metadata = {
     canonical: "/",
     languages: { "de-DE": "/" },
   },
+  // The placeholder copy doesn't show a phone number, email, or address yet,
+  // so there's nothing legitimate for a mobile browser to auto-link — disable
+  // detection across the board instead of just telephone.
   formatDetection: {
     telephone: false,
+    email: false,
+    address: false,
   },
 };
 
