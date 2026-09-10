@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+// Without this, the 404 page silently inherited the homepage's title
+// ("AbiVegas 2027 | EBS Abiball") from the root layout — indistinguishable
+// from the real homepage in a browser tab or search result snippet.
+export const metadata: Metadata = {
+  title: "Seite nicht gefunden | AbiVegas 2027",
+  robots: { index: false, follow: true },
+};
 
 // Next.js falls back to its own generic 404 UI without this file — this
 // keeps a mismatched/old link on the mixed-in-limbo placeholder site at
