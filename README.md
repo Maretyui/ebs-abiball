@@ -21,6 +21,8 @@ Note that the title/description text in `app/layout.tsx` is duplicated across th
 
 `app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes.
 
+This project is pinned to Next.js 15.2.6 rather than latest — `next.config.ts`'s Turbopack root setting has to live under `experimental.turbo` at this version (the top-level `turbopack` key only exists from 15.3+), so check that config key still matches whichever version is installed before upgrading.
+
 ## Accessibility
 
 `app/globals.css` restores a visible `:focus-visible` outline (Tailwind v4 removes the browser default) so keyboard navigation stays visible without adding a ring on mouse clicks, and honors `prefers-reduced-motion` by collapsing animation/transition durations to near-zero for visitors who've requested reduced motion at the OS level. Muted text (`text-foreground/60`, `text-foreground/70`) has already been checked against WCAG AA's 4.5:1 contrast minimum in both light and dark `color-scheme` — if any copy update introduces new muted/low-opacity text, re-check contrast rather than assuming the existing opacity values are safe at a different base color.
