@@ -20,6 +20,8 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#ffffff",
+    // Lets app stores/PWA installers categorize the site correctly.
+    categories: ["events", "entertainment"],
     icons: [
       {
         src: "/favicon.ico",
