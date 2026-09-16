@@ -71,6 +71,20 @@ export const metadata: Metadata = {
   },
 };
 
+// Basic structured data so search engines have an explicit entity to work
+// with even before the real page content ships. WebSite (rather than Event,
+// which requires a startDate that doesn't exist yet for this placeholder
+// page) doesn't need an event date to be valid. No `url` field yet since
+// there's no confirmed live domain — add one alongside `metadataBase` above
+// once that exists.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  inLanguage: "de-DE",
+};
+
 export const viewport: Viewport = {
   // Mirrors globals.css's `color-scheme: light dark` as an actual meta tag,
   // so the browser can pick native UI colors (scrollbars, form controls)
@@ -92,6 +106,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
