@@ -52,8 +52,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
   },
+  // "summary_large_image" rather than "summary" — the latter renders as a
+  // small square thumbnail, wasting the 1200x630 opengraph-image.tsx now
+  // generates for this page.
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
   },
