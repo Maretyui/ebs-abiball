@@ -16,6 +16,12 @@ export default function manifest(): MetadataRoute.Manifest {
     // independently of the page and has no other way to know the language.
     lang: "de",
     dir: "ltr",
+    // Explicit PWA identity, independent of `start_url` — without it, an
+    // install would be tied to whatever `start_url` happens to be right
+    // now, and get treated as a different app if that URL ever changes
+    // (e.g. once the real event copy lands and start_url gets a query
+    // param or sub-path added).
+    id: "/",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
