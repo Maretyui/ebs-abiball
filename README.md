@@ -25,6 +25,8 @@ Note that the title/description text in `app/layout.tsx` is duplicated across th
 
 This project is pinned to Next.js 15.2.6 rather than latest — `next.config.ts`'s Turbopack root setting has to live under `experimental.turbo` at this version (the top-level `turbopack` key only exists from 15.3+), so check that config key still matches whichever version is installed before upgrading.
 
+`app/opengraph-image.tsx` generates the 1200x630 share image used by `layout.tsx`'s `openGraph`/`twitter` metadata — without it, links shared in group chats/Discord would unfurl with no image at all. Update its copy alongside `SITE_TITLE`/`SITE_DESCRIPTION` if the event details change. `app/robots.ts` explicitly allows crawling of the placeholder site and intentionally has no `sitemap` entry yet — add one once a confirmed live domain exists.
+
 ## Accessibility
 
 `app/globals.css` restores a visible `:focus-visible` outline (Tailwind v4 removes the browser default) so keyboard navigation stays visible without adding a ring on mouse clicks, and honors `prefers-reduced-motion` by collapsing animation/transition durations to near-zero for visitors who've requested reduced motion at the OS level. Muted text (`text-foreground/60`, `text-foreground/70`) has already been checked against WCAG AA's 4.5:1 contrast minimum in both light and dark `color-scheme` — if any copy update introduces new muted/low-opacity text, re-check contrast rather than assuming the existing opacity values are safe at a different base color.
