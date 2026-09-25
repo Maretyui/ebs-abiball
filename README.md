@@ -21,6 +21,8 @@ Note that the title/description text in `app/layout.tsx` is duplicated across th
 
 `app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes.
 
+`app/layout.tsx` also injects a `WebSite` JSON-LD structured data block so search engines have an explicit entity to work with even before the real event content ships — it's `WebSite` rather than `Event` because the latter requires a `startDate` that doesn't exist yet. Keep its `name`/`description` in sync with `SITE_TITLE`/`SITE_DESCRIPTION` if those change.
+
 This project is pinned to Next.js 15.2.6 rather than latest — `next.config.ts`'s Turbopack root setting has to live under `experimental.turbo` at this version (the top-level `turbopack` key only exists from 15.3+), so check that config key still matches whichever version is installed before upgrading.
 
 ## Accessibility
