@@ -7,6 +7,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Seite nicht gefunden | AbiVegas 2027",
   robots: { index: false, follow: true },
+  // Without these, a shared link to this page unfurled with the homepage's
+  // OG/Twitter title and description instead of anything 404-specific,
+  // since Next.js otherwise inherits the root layout's full objects wholesale.
+  openGraph: { title: "Seite nicht gefunden | AbiVegas 2027" },
+  twitter: { title: "Seite nicht gefunden | AbiVegas 2027" },
 };
 
 // Next.js falls back to its own generic 404 UI without this file — this
