@@ -23,6 +23,10 @@ export default function manifest(): MetadataRoute.Manifest {
     // param or sub-path added).
     id: "/",
     start_url: "/",
+    // Explicit navigation scope — without it, some installers infer it from
+    // start_url's directory, which is fragile once a real path (ticket
+    // purchase, event details) is added alongside this placeholder root.
+    scope: "/",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#ffffff",
