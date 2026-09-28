@@ -13,6 +13,8 @@ Event website for the 2027 graduation ball ("Abiball") of the EBS graduating cla
 
 The placeholder homepage copy lives in `app/page.tsx`; page title/description metadata lives in `app/layout.tsx`. Update both once Termin, Ort and Ticket details are confirmed. `app/page.tsx` also renders a small "Design & Umsetzung" builder-credit footer linking to maretyui.com, matching the same placeholder pattern used on sibling favor-built sites — leave it in place when the real content lands.
 
+`app/not-found.tsx` gives the 404 page its own title/OG/Twitter overrides and `robots: { index: false }` instead of silently inheriting the homepage's metadata, and repeats the same builder-credit footer as `app/page.tsx` so it isn't only visible on the homepage.
+
 Note that the title/description text in `app/layout.tsx` is duplicated across the top-level `metadata`, `openGraph`, and `twitter` fields — keep all three in sync when updating copy, since only editing one will leave stale text in link previews.
 
 `app/layout.tsx`'s `alternates` also declares a `de-DE` hreflang entry alongside the canonical URL, telling search engines the page's language explicitly rather than leaving it to guesswork.
