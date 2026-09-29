@@ -35,7 +35,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="text-sm underline decoration-dotted underline-offset-2 hover:text-foreground text-foreground/80"
+          className="text-sm underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground text-foreground/80"
         >
           Zurück zur Startseite
         </Link>
@@ -48,7 +48,7 @@ export default function NotFound() {
           href="https://maretyui.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline decoration-dotted underline-offset-2 hover:text-foreground"
+          className="underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground"
         >
           Maik Reinhardt
           <span className="sr-only"> (opens in a new tab)</span>
