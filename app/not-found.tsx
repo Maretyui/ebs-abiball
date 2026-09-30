@@ -43,16 +43,18 @@ export default function NotFound() {
       {/* Mirrors page.tsx's builder credit so it isn't only visible on the
           homepage — /70 not /40 to keep WCAG AA contrast (4.5:1). */}
       <footer className="pb-6 text-center text-xs text-foreground/70">
-        Design &amp; Umsetzung:{" "}
-        <a
-          href="https://maretyui.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground"
-        >
-          Maik Reinhardt
-          <span className="sr-only"> (opens in a new tab)</span>
-        </a>
+        <address className="not-italic">
+          Design &amp; Umsetzung:{" "}
+          <a
+            href="https://maretyui.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground"
+          >
+            Maik Reinhardt
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </address>
       </footer>
     </div>
   );
