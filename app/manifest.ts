@@ -38,6 +38,15 @@ export default function manifest(): MetadataRoute.Manifest {
         sizes: "any",
         type: "image/x-icon",
       },
+      // Backs icon.tsx's generated PNG — Chrome's install-prompt criteria
+      // need a real raster icon at 192x192 or larger, which the .ico above
+      // alone doesn't satisfy.
+      {
+        src: "/icon",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any",
+      },
     ],
   };
 }
