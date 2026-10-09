@@ -21,6 +21,8 @@ Note that the title/description text in `app/layout.tsx` is duplicated across th
 
 `app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the event copy changes.
 
+`app/icon.tsx` and `app/apple-icon.tsx` generate the actual PNG marks referenced above — a 512x512 icon for `manifest.ts`'s `/icon` entry (satisfying Chrome's install-prompt raster-icon requirement) and a 180x180 Apple touch icon for iOS "Add to Home Screen" pinning. Update both alongside the other visual assets if the event branding changes.
+
 `app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes.
 
 `app/layout.tsx` also injects a `WebSite` JSON-LD structured data block so search engines have an explicit entity to work with even before the real event content ships — it's `WebSite` rather than `Event` because the latter requires a `startDate` that doesn't exist yet. Keep its `name`/`description` in sync with `SITE_TITLE`/`SITE_DESCRIPTION` if those change.
