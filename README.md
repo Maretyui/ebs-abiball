@@ -21,7 +21,7 @@ Note that the title/description text in `app/layout.tsx` is duplicated across th
 
 `app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the event copy changes.
 
-`app/icon.tsx` and `app/apple-icon.tsx` generate the actual PNG marks referenced above — a 512x512 icon for `manifest.ts`'s `/icon` entry (satisfying Chrome's install-prompt raster-icon requirement) and a 180x180 Apple touch icon for iOS "Add to Home Screen" pinning. Update both alongside the other visual assets if the event branding changes.
+`app/icon.tsx` and `app/apple-icon.tsx` generate the actual PNG marks referenced above — a 512x512 icon for `manifest.ts`'s `/icon` entries (satisfying Chrome's install-prompt raster-icon requirement) and a 180x180 Apple touch icon for iOS "Add to Home Screen" pinning. Update both alongside the other visual assets if the event branding changes. `manifest.ts` lists `/icon` twice, once with `purpose: "any"` and once with `purpose: "maskable"`, since the manifest type only accepts one purpose per entry — the maskable copy lets Android's adaptive-icon system mask it into a circle/squircle/rounded square per device instead of letterboxing it. If the icon mark ever moves closer to the edges, re-check it still fits within the ~80%-diameter safe zone maskable icons get cropped to.
 
 `app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes.
 
