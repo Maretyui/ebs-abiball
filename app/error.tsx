@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
 // Next.js falls back to its own generic error UI without this file — this
 // keeps a runtime error at least visually consistent with the homepage and
@@ -31,13 +32,21 @@ export default function Error({
         <p className="text-lg text-foreground/80 leading-relaxed text-pretty">
           Bitte versuche es erneut oder kehre zur Startseite zurück.
         </p>
-        <button
-          type="button"
-          onClick={() => reset()}
-          className="text-sm underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground text-foreground/80"
-        >
-          Erneut versuchen
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            type="button"
+            onClick={() => reset()}
+            className="text-sm underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground text-foreground/80"
+          >
+            Erneut versuchen
+          </button>
+          <Link
+            href="/"
+            className="text-sm underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground text-foreground/80"
+          >
+            Zurück zur Startseite
+          </Link>
+        </div>
       </main>
       {/* Mirrors page.tsx's builder credit so it isn't only visible on the
           homepage — /70 not /40 to keep WCAG AA contrast (4.5:1). */}
