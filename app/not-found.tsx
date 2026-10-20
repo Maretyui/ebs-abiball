@@ -48,7 +48,7 @@ export default function NotFound() {
           <a
             href="https://maretyui.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer author"
             className="underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground"
           >
             Maik Reinhardt
