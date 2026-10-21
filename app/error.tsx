@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 // Next.js falls back to its own generic error UI without this file — this
@@ -14,18 +14,29 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
   useEffect(() => {
     console.error(error);
+    // Unlike not-found.tsx, this boundary swaps in without a route change
+    // or title update, so there's no normal cue for assistive tech that
+    // something happened — move focus to the heading so it gets announced,
+    // matching the fix already applied on ju-jutsu.
+    headingRef.current?.focus();
   }, [error]);
 
   return (
     <div className="grid min-h-screen items-center justify-items-center p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col items-center gap-6 text-center max-w-2xl" role="alert">
-        <header>
+      <main className="flex flex-col items-center gap-6 text-center max-w-2xl">
+        <header role="alert">
           <p className="text-sm uppercase tracking-[0.2em] text-foreground/60">
             Fehler
           </p>
-          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-balance">
+          <h1
+            ref={headingRef}
+            tabIndex={-1}
+            className="text-5xl sm:text-6xl font-bold tracking-tight text-balance outline-none"
+          >
             Etwas ist schiefgelaufen
           </h1>
         </header>
