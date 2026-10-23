@@ -71,7 +71,7 @@ export default function Error({
             className="underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground"
           >
             Maik Reinhardt
-            <span className="sr-only"> (opens in a new tab)</span>
+            <span className="sr-only" lang="en"> (opens in a new tab)</span>
           </a>
         </address>
       </footer>
