@@ -15,6 +15,8 @@ The placeholder homepage copy lives in `app/page.tsx`; page title/description me
 
 `app/not-found.tsx` gives the 404 page its own title/OG/Twitter overrides and `robots: { index: false, follow: true }` instead of silently inheriting the homepage's metadata, and repeats the same builder-credit footer as `app/page.tsx` so it isn't only visible on the homepage.
 
+`app/error.tsx` only catches failures below the root layout — a failure while rendering `app/layout.tsx` itself (e.g. the font loader) falls through to Next's bare default error screen instead. `app/global-error.tsx` covers that one remaining case, matching the pattern already used on kirchliche-pilgerplaetze; it has to recreate the `<html>`/`<body>` shell and font variables `layout.tsx` normally provides, and its home link is a plain `<a>` rather than `next/link`, since the app router state `Link` depends on is exactly what may have failed to initialize here.
+
 Note that the title/description text in `app/layout.tsx` is duplicated across the top-level `metadata`, `openGraph`, and `twitter` fields — keep all three in sync when updating copy, since only editing one will leave stale text in link previews.
 
 `app/layout.tsx`'s `alternates` also declares a `de-DE` hreflang entry alongside the canonical URL, telling search engines the page's language explicitly rather than leaving it to guesswork.
