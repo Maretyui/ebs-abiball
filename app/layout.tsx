@@ -41,7 +41,14 @@ export const metadata: Metadata = {
   // Matches manifest.ts's PWA-installer `categories` field with the
   // equivalent classification for browsers/search engines.
   category: "events",
-  robots: { index: true, follow: true },
+  // Google's default max-image-preview setting ("standard") caps search
+  // result previews to a small thumbnail — "large" lets it show the full
+  // 1200x630 opengraph-image.tsx already generates for this page instead.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { "max-image-preview": "large" },
+  },
   // iOS Safari ignores manifest.ts's name/short_name for "Add to Home
   // Screen" — it needs this dedicated meta tag for the pinned title.
   appleWebApp: {

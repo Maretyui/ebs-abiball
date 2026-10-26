@@ -31,7 +31,7 @@ Note that the title/description text in `app/layout.tsx` is duplicated across th
 
 This project is pinned to Next.js 15.2.6 rather than latest — `next.config.ts`'s Turbopack root setting has to live under `experimental.turbo` at this version (the top-level `turbopack` key only exists from 15.3+), so check that config key still matches whichever version is installed before upgrading.
 
-`app/opengraph-image.tsx` generates the 1200x630 share image used by `layout.tsx`'s `openGraph`/`twitter` metadata — without it, links shared in group chats/Discord would unfurl with no image at all. Update its copy alongside `SITE_TITLE`/`SITE_DESCRIPTION` if the event details change. `app/robots.ts` explicitly allows crawling of the placeholder site and intentionally has no `sitemap` entry yet — add one once a confirmed live domain exists.
+`app/opengraph-image.tsx` generates the 1200x630 share image used by `layout.tsx`'s `openGraph`/`twitter` metadata — without it, links shared in group chats/Discord would unfurl with no image at all. Update its copy alongside `SITE_TITLE`/`SITE_DESCRIPTION` if the event details change. `layout.tsx`'s `metadata.robots.googleBot` also sets `max-image-preview: "large"`, so Google's search results can show that same image at full size instead of Google's smaller default preview. `app/robots.ts` explicitly allows crawling of the placeholder site and intentionally has no `sitemap` entry yet — add one once a confirmed live domain exists.
 
 ## Accessibility
 
