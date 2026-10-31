@@ -59,13 +59,15 @@ body {
   a, button {
     text-decoration-thickness: 2px;
   }
-  /* The muted eyebrow/meta text (text-foreground/60 and /70) already clears
-     WCAG AA's 4.5:1 minimum in both color schemes (see the README's
-     Accessibility section) — but prefers-contrast: more is a request for
-     *more* than that minimum, so drop the opacity to render this text at
-     full foreground contrast for visitors who've asked the OS for it. */
+  /* The muted eyebrow/meta/body text (text-foreground/60, /70 and /80)
+     already clears WCAG AA's 4.5:1 minimum in both color schemes (see the
+     README's Accessibility section) — but prefers-contrast: more is a
+     request for *more* than that minimum, so drop the opacity to render
+     this text at full foreground contrast for visitors who've asked the
+     OS for it. */
   .text-foreground\/60,
-  .text-foreground\/70 {
+  .text-foreground\/70,
+  .text-foreground\/80 {
     color: var(--foreground);
   }
 }
